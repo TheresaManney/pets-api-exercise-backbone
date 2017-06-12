@@ -7,8 +7,8 @@ var Pet = Backbone.Model.extend({
     console.log("Breed " + this.get("breed"));
   },
   initialize: function(params) {
-    console.log("Starting ", params);
-    this.logStatus();
+    // console.log("Starting ", params);
+    // this.logStatus();
   }
 });
 

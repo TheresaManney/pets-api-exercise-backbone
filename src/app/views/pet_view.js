@@ -8,7 +8,7 @@ var PetView = Backbone.View.extend({
     this.template = params.template;
   },
   render: function() {
-    var compiledTemplate = this.template(this.model.toJSON());
+    var compiledTemplate = this.template({ pet: this.model.toJSON()});
     this.$el.html(compiledTemplate);
     return this;
   }

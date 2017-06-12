@@ -1,18 +1,25 @@
 import $ from 'jquery';
 import _ from 'underscore';
 import Pet from 'app/models/pet.js';
-import PetList from 'app/collections/pet_list';
+import PetList from 'app/collections/pet_list.js';
 import PetView from 'app/views/pet_view.js';
-import PetListView from 'app/views/pet_list_view';
+import PetListView from 'app/views/pet_list_view.js';
 
 var myPetList = new PetList();
-myPetList.fetch();
 
-$(document).ready(function() {
+var successCallback = function() {
   var myPetListView = new PetListView ({
     model: myPetList,
     template: _.template($('#pet-card-template').html()),
-    el: 'main'
+    el: 'body'
+
   });
   myPetListView.render();
+};
+
+$(document).ready(function() {
+  myPetList.fetch({
+    success: successCallback
+  });
+
 });
