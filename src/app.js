@@ -16,10 +16,11 @@ var successCallback = function() {
   });
   myPetListView.render();
 };
-
+// could include an errorCallback
 $(document).ready(function() {
   myPetList.fetch({
     success: successCallback
+    //error: errorCallback
   });
 
 });

@@ -10,6 +10,9 @@ var PetListView = Backbone.View.extend({
     // this.detailsTemplate = _.template($('#pet-info-template').html());
     this.detailsTemplate = params.deetTemplate;
     this.listenTo(this.model, "update", this.render);
+    //below is something Chris does.. he also includes the successCallback and errorCallbacks here
+    // this makes the app.js very small. so the business logic stays in the views rather than app.js
+    // this.model.fetch({reset: true});
   },
   render: function() {
     this.$('#pet').empty();
@@ -47,6 +50,9 @@ var PetListView = Backbone.View.extend({
     // this.$('#pet-list').empty();
     this.$('#pet').hide();
     this.$('#pet-list').show();
+  },
+  updatePet: function() {
+
   },
   getFormData: function() {
     console.log('getFormData');
