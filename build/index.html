@@ -29,10 +29,15 @@
       <h4>Age: <%- pet.age %></h4>
       <h4>Breed: <%- pet.breed %></h4>
       <% if(pet.vaccinated){ %>
-        <input type="checkbox" name="vaccinated" checked="checked">
+        <h4>Vaccinated:
+        <input type="checkbox" name="vaccinated" checked="checked"> </h4>
       <% }else{ %>
-        <input type="checkbox" name="vaccinated">
+        <h4>Vaccinated:
+        <input type="checkbox" name="vaccinated"></h4>
       <% } %>
+      <button class="button alert">
+        Delete
+      </button>
     </script>
 
     <script src="/app.bundle.js"></script>

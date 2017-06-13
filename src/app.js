@@ -11,8 +11,8 @@ var successCallback = function() {
   var myPetListView = new PetListView ({
     model: myPetList,
     template: _.template($('#pet-card-template').html()),
+    deetTemplate: _.template($('#pet-info-template').html()),
     el: 'body'
-
   });
   myPetListView.render();
 };

@@ -13,8 +13,11 @@ var PetView = Backbone.View.extend({
     return this;
   },
   events: {
-    
-    'click' : 'onClick'
+    'click button.alert' : 'deletePet',
+    'click li' : 'onClick'
+  },
+  deletePet: function() {
+    this.model.destroy();
   },
   onClick: function() {
     var click = this.trigger('selected', this.model);

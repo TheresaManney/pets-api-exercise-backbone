@@ -7,7 +7,8 @@ import Pet from 'app/models/pet.js';
 var PetListView = Backbone.View.extend({
   initialize: function(params) {
     this.template = params.template;
-    this.detailsTemplate = _.template($('#pet-info-template').html());
+    // this.detailsTemplate = _.template($('#pet-info-template').html());
+    this.detailsTemplate = params.deetTemplate;
   },
   render: function() {
     this.$('#pet').empty();
@@ -15,10 +16,10 @@ var PetListView = Backbone.View.extend({
     var that = this;
     // console.log(this.model.length);
     this.model.each(function(pet) {
-      // console.log(pet);
+      console.log(pet);
       var petView = new PetView({
         model: pet,
-        template: that.template
+        template: that.template,
       });
       // console.log(petView.render().$el);
       that.listenTo(petView, "selected", that.petDetails);
