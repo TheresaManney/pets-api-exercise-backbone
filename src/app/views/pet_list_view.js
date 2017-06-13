@@ -9,6 +9,7 @@ var PetListView = Backbone.View.extend({
     this.template = params.template;
     // this.detailsTemplate = _.template($('#pet-info-template').html());
     this.detailsTemplate = params.deetTemplate;
+    this.listenTo(this.model, "update", this.render);
   },
   render: function() {
     this.$('#pet').empty();

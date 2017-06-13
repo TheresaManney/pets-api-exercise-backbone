@@ -49,6 +49,9 @@
 
     <script id="pet-card-template" type="text/template">
       <li><%- pet.name %></li>
+      <button class="button alert">
+        Delete
+      </button>
     </script>
 
     <script id="pet-info-template" type="text/template">
@@ -62,9 +65,6 @@
         <h4>Vaccinated:
         <input type="checkbox" name="vaccinated"></h4>
       <% } %>
-      <button class="button alert">
-        Delete
-      </button>
     </script>
 
     <script src="/app.bundle.js"></script>
