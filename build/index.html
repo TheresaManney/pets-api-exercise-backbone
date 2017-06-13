@@ -13,6 +13,33 @@
       <h1>Pets!</h1>
     </header>
     <main>
+
+      <aside class="small-11 large-3 medium-3 columns create-tasklist">
+        <h2>Create a New Pet</h2>
+          <section class="row" id="title-section">
+            <label class="columns medium-12">Name
+              <input type="text" name="name" id="name" placeholder="Enter the name here" />
+            </label>
+          </section>
+          <section class="row" id="description-section">
+            <label class="columns medium-12">Breed
+              <textarea id="breed" placeholder="Enter breed"></textarea>
+            </label>
+          </section>
+          <section class="row" id="description-section">
+            <label class="columns medium-12">Age
+              <textarea id="age" placeholder="Enter age"></textarea>
+            </label>
+          </section>
+          <section class="row" id="buttons-section">
+            <div class="medium-8 columns">
+              <label for="vaccinated-checkbox">Vaccinated?</label>
+              <input id="vaccinated-checkbox" type="checkbox">
+            </div>
+
+            <button id="add-pet" class="medium-3 columns button success">Add a Pet</button>
+          </section>
+      </aside>
       <section id='pet'></section>
       <section id='pet-list'></section>
       <section id='new-pet'></section>
